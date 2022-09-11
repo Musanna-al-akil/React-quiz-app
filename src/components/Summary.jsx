@@ -10,7 +10,6 @@ export default function Summary() {
           Your score is <br />5 out of 10
         </p>
       </div>
-
       <div className={classes.badge}>
         <img src={imageSummary} alt="Success" />
       </div>

@@ -3,7 +3,7 @@ import CheckBox from "./CheckBox";
 export default function Answers() {
   return (
     <div className={classes.answers}>
-      <CheckBox className={classes.answer}  text="test answer"/>
+      <CheckBox className={classes.answer} text="test answer" />
     </div>
   );
 }
