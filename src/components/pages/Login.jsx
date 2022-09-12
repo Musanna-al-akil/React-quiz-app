@@ -34,7 +34,7 @@ export default function Login() {
   return (
     <>
       <h1>Login to your account</h1>
-      <div class="column">
+      <div className="column">
         <Illustration image={loginImage} />
         <Form className={classes.login} onSubmit={handleSubmit}>
           <TextInput
