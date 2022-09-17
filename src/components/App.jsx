@@ -19,7 +19,7 @@ function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
             <Route
-              path="/quiz"
+              path="/quiz/:id"
               element={
                 <PrivateRoute>
                   <Quiz />
@@ -27,7 +27,7 @@ function App() {
               }
             />
             <Route
-              path="/Result"
+              path="/Result/:id"
               element={
                 <PrivateRoute>
                   <Result />
