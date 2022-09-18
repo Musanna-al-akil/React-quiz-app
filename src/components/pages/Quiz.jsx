@@ -37,7 +37,7 @@ export default function Quiz() {
   const [qna, dispatch] = useReducer(reducer, initialState);
 
   const { currentUser } = useAuth();
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch({
@@ -79,12 +79,7 @@ export default function Quiz() {
     await set(resultRef, {
       [id]: qna,
     });
-    history({
-      pathname: `/result/${id}`,
-      state: {
-        qna,
-      },
-    });
+    navigate(`/result/${id}`, { state: qna });
   }
 
   //calculate percentage of progress
@@ -101,6 +96,7 @@ export default function Quiz() {
           <h1>{qna[currentQuestion].title}</h1>
           <h4>Question can have multiple answers</h4>
           <Answers
+            input={true}
             options={qna[currentQuestion].options}
             handleChange={handleAnswerChange}
           />
