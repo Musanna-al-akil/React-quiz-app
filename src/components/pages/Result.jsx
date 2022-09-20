@@ -8,7 +8,6 @@ export default function Result() {
   const { id } = useParams();
   const { state } = useLocation();
   const qna = state;
-  console.log(qna);
   const { loading, error, answers } = useAnswers(id);
 
   function calculate() {
