@@ -17,7 +17,7 @@ export default function Summary({ score, noq }) {
   }, [score, noq]);
 
   const { loading, error, result } = useFetch(
-    `https://pixabay.com/api/?key=${process.env.REACT_APP_PEXELS_API_KEY}&q=${getKeyword}&image_type=photo30052580-bbe1cd6e51b7dbc108216c34b&per_page=3`,
+    `https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABAY_API_KEY}&q=${getKeyword}&image_type=photo30052580-bbe1cd6e51b7dbc108216c34b&per_page=3`,
     "GET"
   );
 
